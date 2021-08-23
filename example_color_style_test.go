@@ -10,7 +10,7 @@ func Example() {
 	text := colorStyle.Green("green")
 	fmt.Printf("a %s text\n", text)
 
-	text = colorStyle.DarkBlue("Blue")
+	text = colorStyle.Blue("Blue")
 	fmt.Printf("a %s text\n", text)
 
 	text = colorStyle.New().ColorRed().Sprint("red")
@@ -19,9 +19,14 @@ func Example() {
 	colorStyle.New().StyleItalic().ColorRed().BgYellow().Printf("a italic red bgYellow text: %s\n", "Hello 世界!")
 	colorStyle.New().StyleBold().Printf("a bold text: %s\n", "Hello 世界!")
 	colorStyle.New().StyleItalic().Printf("a italic text: %s\n", "Hello 世界!")
-	colorStyle.New().ColorPurple().Printf("a purple text: %s\n", "Hello 世界!")
-	colorStyle.New().BgLightBlue().Printf("a bgLightBlue text: %s\n", "Hello 世界!")
-	colorStyle.New().BgLightBlue().Println("a bgLightBlue text")
+	colorStyle.New().ColorMagenta().Printf("a magenta text: %s\n", "Hello 世界!")
+	colorStyle.New().BgCyan().Printf("a  background color cyan text: %s\n", "Hello 世界!")
+	colorStyle.New().BgCyan().Println("a background color cyan text")
+
+	css := colorStyle.New()
+	css.StyleStrikethrough().Println("删除线文本")
+	css.StyleUnderline().Println("下划线文本")
+	css.StyleReverse().Println("反显文本")
 }
 
 func ExampleGreen() {
@@ -29,8 +34,8 @@ func ExampleGreen() {
 	fmt.Printf("a %s text\n", text)
 }
 
-func ExampleDarkBlue() {
-	text := colorStyle.DarkBlue("Blue")
+func ExampleBlue() {
+	text := colorStyle.Blue("Blue")
 	fmt.Printf("a %s text\n", text)
 }
 
@@ -58,5 +63,5 @@ func ExampleCSS_Printf() {
 }
 
 func ExampleCSS_Println() {
-	colorStyle.New().BgLightBlue().Println("a bgLightBlue text")
+	colorStyle.New().BgBlue().Println("a background color blue text")
 }

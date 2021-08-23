@@ -4,50 +4,50 @@ import "strconv"
 
 type Color int
 
-func (c Color) String() *string {
+func (c Color) ptrString() *string {
 	str := strconv.Itoa(int(c))
 	return &str
 }
 
 const (
-	Black Color = iota + 30
-	Red
-	Green
-	Yellow
-	DarkBlue
-	Purple
-	LightBlue
-	White
+	FgBlack Color = iota + 30
+	FgRed
+	FgGreen
+	FgYellow
+	FgDarkBlue
+	FgPurple
+	FgLightBlue
+	FgWhite
 )
 
-func (c *colorStyle) ColorBlack() *colorStyle {
-	return c.SetColor(Black)
+func (c *CSS) ColorBlack() *CSS {
+	return c.setColor(FgBlack)
 }
 
-func (c *colorStyle) ColorRed() *colorStyle {
-	return c.SetColor(Red)
+func (c *CSS) ColorRed() *CSS {
+	return c.setColor(FgRed)
 }
 
-func (c *colorStyle) ColorGreen() *colorStyle {
-	return c.SetColor(Green)
+func (c *CSS) ColorGreen() *CSS {
+	return c.setColor(FgGreen)
 }
 
-func (c *colorStyle) ColorYellow() *colorStyle {
-	return c.SetColor(Yellow)
+func (c *CSS) ColorYellow() *CSS {
+	return c.setColor(FgYellow)
 }
 
-func (c *colorStyle) ColorDarkBlue() *colorStyle {
-	return c.SetColor(DarkBlue)
+func (c *CSS) ColorDarkBlue() *CSS {
+	return c.setColor(FgDarkBlue)
 }
 
-func (c *colorStyle) ColorPurple() *colorStyle {
-	return c.SetColor(DarkBlue)
+func (c *CSS) ColorPurple() *CSS {
+	return c.setColor(FgDarkBlue)
 }
 
-func (c *colorStyle) ColorLightBlue() *colorStyle {
-	return c.SetColor(LightBlue)
+func (c *CSS) ColorLightBlue() *CSS {
+	return c.setColor(FgLightBlue)
 }
 
-func (c *colorStyle) ColorWhite() *colorStyle {
-	return c.SetColor(White)
+func (c *CSS) ColorWhite() *CSS {
+	return c.setColor(FgWhite)
 }

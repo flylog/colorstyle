@@ -4,7 +4,7 @@ import "strconv"
 
 type Style int
 
-func (s Style) String() *string {
+func (s Style) ptrString() *string {
 	str := strconv.Itoa(int(s))
 	return &str
 }
@@ -19,30 +19,30 @@ const (
 	Strikethrough              // 删除线
 )
 
-func (c *colorStyle) StyleDefault() *colorStyle {
-	return c.SetStyle(Default)
+func (c *CSS) StyleDefault() *CSS {
+	return c.setStyle(Default)
 }
 
-func (c *colorStyle) StyleBold() *colorStyle {
-	return c.SetStyle(Bold)
+func (c *CSS) StyleBold() *CSS {
+	return c.setStyle(Bold)
 }
 
-func (c *colorStyle) StyleGrey() *colorStyle {
-	return c.SetStyle(Grey)
+func (c *CSS) StyleGrey() *CSS {
+	return c.setStyle(Grey)
 }
 
-func (c *colorStyle) StyleItalic() *colorStyle {
-	return c.SetStyle(Italic)
+func (c *CSS) StyleItalic() *CSS {
+	return c.setStyle(Italic)
 }
 
-func (c *colorStyle) StyleUnderline() *colorStyle {
-	return c.SetStyle(Underline)
+func (c *CSS) StyleUnderline() *CSS {
+	return c.setStyle(Underline)
 }
 
-func (c *colorStyle) StyleReverse() *colorStyle {
-	return c.SetStyle(Reverse)
+func (c *CSS) StyleReverse() *CSS {
+	return c.setStyle(Reverse)
 }
 
-func (c *colorStyle) StyleStrikethrough() *colorStyle {
-	return c.SetStyle(Strikethrough)
+func (c *CSS) StyleStrikethrough() *CSS {
+	return c.setStyle(Strikethrough)
 }

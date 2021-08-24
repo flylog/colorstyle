@@ -1,4 +1,4 @@
-package colorStyle
+package colorstyle
 
 import "strconv"
 

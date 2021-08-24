@@ -7,7 +7,7 @@ ColorStyle 是一个用于命令行文本的样式库。
 
 # Doc
 
-See this document at [GoDoc](https://pkg.go.dev/github.com/flylog/colorStyle)
+See this document at [GoDoc](https://pkg.go.dev/github.com/flylog/colorstyle)
 
 # Install
     

@@ -40,7 +40,7 @@ func (c *CSS) setBgColor(s BgColor) *CSS {
 }
 
 // \033[字符的显示方式;字符的颜色;字符的背景颜色m 需要显示的字符 \033[m
-func (c *CSS) toString() (start, end string) {
+func (c *CSS) DecoratedString() (start, end string) {
 	var codes []string
 	buf := bytes.NewBuffer([]byte(ANSI_SET))
 
@@ -62,26 +62,26 @@ func (c *CSS) toString() (start, end string) {
 
 // like fmt.Println
 func (c *CSS) Println(text ...interface{}) {
-	start, end := c.toString()
+	start, end := c.DecoratedString()
 	fmt.Println(start + fmt.Sprint(text...) + end)
 }
 
 // like fmt.Printf
 func (c *CSS) Printf(format string, text ...interface{}) {
-	start, end := c.toString()
+	start, end := c.DecoratedString()
 	fmt.Printf(format, start+fmt.Sprint(text...)+end)
 }
 
 // like fmt.Sprint
 func (c *CSS) Sprint(text ...interface{}) string {
-	start, end := c.toString()
+	start, end := c.DecoratedString()
 	return fmt.Sprint(start + fmt.Sprint(text...) + end)
 
 }
 
 // like fmt.Sprintf
 func (c *CSS) Sprintf(format string, text ...interface{}) string {
-	start, end := c.toString()
+	start, end := c.DecoratedString()
 	return fmt.Sprintf(format, start+fmt.Sprint(text...)+end)
 }
 

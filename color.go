@@ -70,7 +70,7 @@ func (c *CSS) ColorMagenta() *CSS {
 	return c.setColor(FgMagenta)
 }
 
-// 设置前景青色
+// 设置前景为青色
 //
 // Set foreground colour to cyan
 func (c *CSS) ColorCyan() *CSS {
@@ -126,7 +126,7 @@ func (c *CSS) ColorBrightMagenta() *CSS {
 	return c.setColor(FgBrightMagenta)
 }
 
-// 设置前景亮青色
+// 设置前景为亮青色
 //
 // Set foreground colour to bright cyan
 func (c *CSS) ColorBrightCyan() *CSS {

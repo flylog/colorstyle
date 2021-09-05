@@ -197,7 +197,7 @@ func BrightCyan(text ...interface{}) string {
 	return c.setColor(FgBrightCyan).Sprint(text...)
 }
 
-// 生成亮色的文本
+// 生成亮白色的文本
 //
 // Generate bright white text
 func BrightWhite(text ...interface{}) string {

@@ -56,7 +56,7 @@ func (c *CSS) BgYellow() *CSS {
 	return c.setBgColor(BgYellow)
 }
 
-// 设置背景颜色为 蓝色
+// 设置背景颜色为蓝色
 //
 // Set the background colour to blue
 func (c *CSS) BgBlue() *CSS {

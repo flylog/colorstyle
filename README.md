@@ -51,3 +51,6 @@ func main() {
 output:
 
 ![](example/output.jpg)
+# Implementation of other languages
+
+- [x] write in Rust: https://github.com/code-translation/colorstyle
